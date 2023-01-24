@@ -5,11 +5,11 @@ databases:
 
 services:
   - type: web
-    name: mysite
+    name: todo
     plan: free
     env: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn mysite.wsgi:application"
+    startCommand: "gunicorn todo.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
